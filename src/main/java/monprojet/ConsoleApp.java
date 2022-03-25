@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Component;
 
 import lombok.extern.log4j.Log4j2;
@@ -47,8 +48,13 @@ public class ConsoleApp implements CommandLineRunner {
 
         log.info("Suppression par clé");
         log.info("Avant la suppression il y a {} enregistrements", countryDAO.count());
-        countryDAO.deleteById(2);
-        log.info("Après la suppression il reste {} enregistrements", countryDAO.count());
+        try {
+            countryDAO.deleteById(2);
+            log.info("Après la suppression il reste {} enregistrements", countryDAO.count());    
+        } catch (DataIntegrityViolationException e) {
+            log.info("Impossible de supprimer ce pays, il reste toujours {} enregistrements", countryDAO.count());    
+
+        }
    }
 
     public static void tapezEnterPourContinuer() throws Exception {
