@@ -3,7 +3,6 @@ nbproject/
 *.iml
 target/
 .settings/
-.vscode/
 .classpath
 .factorypath
 .project
