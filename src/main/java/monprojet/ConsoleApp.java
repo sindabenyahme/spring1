@@ -34,26 +34,25 @@ public class ConsoleApp implements CommandLineRunner {
 
         log.info("On ajoute un nouvel enregistrement");
         Country espagne = new Country("ES", "España");
-        log.info("Avant d'enregistrer, pas de clé : {}", espagne);
+        log.info("Avant d'enregistrer, pas de cle : {}", espagne);
         countryDAO.save(espagne);
-        log.info("Après l'enregistrement, la clé a été générée : {}", espagne);
+        log.info("Après l'enregistrement, la cle a été generee : {}", espagne);
 
         tapezEnterPourContinuer();
 
-        log.info("Recherche par clé");
+        log.info("Recherche par cle");
         Optional<Country> oc = countryDAO.findById(2);
         oc.ifPresent(c -> log.info("On a trouvé: {}", c));
 
         tapezEnterPourContinuer();
 
-        log.info("Suppression par clé");
+        log.info("Suppression par cle");
         log.info("Avant la suppression il y a {} enregistrements", countryDAO.count());
         try {
             countryDAO.deleteById(2);
-            log.info("Après la suppression il reste {} enregistrements", countryDAO.count());    
+            log.info("Apres la suppression il reste {} enregistrements", countryDAO.count());
         } catch (DataIntegrityViolationException e) {
-            log.info("Impossible de supprimer ce pays, il reste toujours {} enregistrements", countryDAO.count());    
-
+            log.info("Impossible de supprimer ce pays, il reste toujours {} enregistrements", countryDAO.count());
         }
    }
 
