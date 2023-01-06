@@ -33,7 +33,7 @@ public class CountryRepositoryTest {
     }
 
     @Test
-    @Sql("test-data.sql") // On peut charger des donnnées spécifiques pour un test
+    @Sql("test-data.sql") // On peut charger des données spécifiques pour un test
     void onSaitCompterLesEnregistrements() {
         log.info("On compte les enregistrements de la table 'Country'");
         int combienDePaysDansLeJeuDeTest = 3 + 1; // 3 dans data.sql, 1 dans test-data.sql
