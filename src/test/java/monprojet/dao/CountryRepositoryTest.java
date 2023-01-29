@@ -24,11 +24,10 @@ public class CountryRepositoryTest {
         
         Country paysQuiExisteDeja = new Country("XX", "France");
         try {
-            countryDAO.save(paysQuiExisteDeja); // On essaye d'enregistrer un pays dont le nom existe   
-
+            countryDAO.save(paysQuiExisteDeja); // On essaye d'enregistrer un pays dont le nom existe
             fail("On doit avoir une violation de contrainte d'intégrité (unicité)");
         } catch (DataIntegrityViolationException e) {
-            // Si on arrive ici c'est normal, l'exception attendue s'est produite
+            // Si on arrive ici, c'est normal, l'exception attendue s'est produite
         }
     }
 

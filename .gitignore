@@ -1,5 +1,6 @@
 .idea/
-nbproject/
+.nbproject/
+.vscode/
 *.iml
 target/
 .settings/

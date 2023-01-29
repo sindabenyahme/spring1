@@ -24,43 +24,16 @@
     </properties>
 
 	<dependencies>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
 		<dependency>
 			<!-- JPA -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-			<!-- Le moteur de template Mustache -->
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mustache</artifactId>
-		</dependency>
-		<dependency>
 			<!-- Spring MVC -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<!-- Web services REST -->
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-rest</artifactId>
-		</dependency>
-		<dependency>
-			<!-- Gestion des sessions -->
-			<groupId>org.springframework.session</groupId>
-			<artifactId>spring-session-core</artifactId>
-		</dependency>
-		<!-- Le browser d'API swagger -->
-		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-			<version>2.0.2</version>
-		 </dependency>
 		<dependency>
 			<!-- Outils de développement Spring Boot, cf: https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html -->
 			<groupId>org.springframework.boot</groupId>
@@ -89,19 +62,6 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		<!-- Pour produire du XML -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-xml</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.module</groupId>
-			<artifactId>jackson-module-jaxb-annotations</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.datatype</groupId>
-			<artifactId>jackson-datatype-hibernate5</artifactId>
 		</dependency>
 		<!-- Lombok pour générer automatiquement les getter / setter...  -->
 		<!-- cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/ -->
