@@ -23,6 +23,7 @@ public class ConsoleApp implements CommandLineRunner {
      * Equivalent de la méthode 'main' pour une application Spring Boot
      **/
     public void run(String... args) throws Exception {
+        tapezEnterPourContinuer();
 
         log.info("On liste tous les enregistrements de la table 'Country'");
         List<Country> tousLesPays = countryDAO.findAll();
